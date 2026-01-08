@@ -1,0 +1,70 @@
+# ============================
+# Rust / Cargo
+# ============================
+target/
+**/target/
+
+# Cargo.lock
+# For binaries and apps you usually commit this.
+# For learning/playground repos it's optional.
+# Uncomment if you DON'T want it tracked.
+# Cargo.lock
+
+# Rustfmt backup files
+*.rs.bk
+
+# ============================
+# IDEs & Editors
+# ============================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ / CLion
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+*.swn
+*~
+
+# Emacs
+#*
+.\#*
+
+# ============================
+# OS files
+# ============================
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# ============================
+# Logs / Debug
+# ============================
+*.log
+
+# ============================
+# Test artifacts / challenge data
+# ============================
+
+# If you store plaintext inputs, wordlists, or downloaded challenge data
+data/
+inputs/
+outputs/
+
+# ============================
+# Secrets (just in case)
+# ============================
+.env
+.env.*

@@ -1,0 +1,3 @@
+[workspace]
+members = ["cp_core", "cp_challenges"]
+resolver = "2"

@@ -1,0 +1,10 @@
+[package]
+name = "cp_challenges"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+cp_core = { path = "../cp_core" }
+hex = "0.4.3"
+

@@ -3,3 +3,5 @@ pub mod c02_fixed_xor;
 pub mod c03_single_byte_xor_cipher;
 pub mod c04_detect_single_character_xor;
 pub mod c05_repeating_key_xor;
+
+pub mod c06_break_repeating_xor;

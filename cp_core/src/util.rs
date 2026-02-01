@@ -30,3 +30,21 @@ pub fn single_byte_xor_bruteforce(input_bytes: &[u8]) -> Option<String> {
 
 	best_plaintext
 }
+
+	use anyhow::Result;
+
+	/// Compute the Hamming distance in bits between two equal-length byte slices.
+	/// Returns the number of differing bits.
+	pub fn hamming_distance_bits(a: &[u8], b: &[u8]) -> Result<usize> {
+		if a.len() != b.len() {
+			anyhow::bail!("length mismatch: {} vs {}", a.len(), b.len());
+		}
+
+		let distance = a
+			.iter()
+			.zip(b.iter())
+			.map(|(&x, &y)| (x ^ y).count_ones() as usize)
+			.sum();
+
+		Ok(distance)
+	}

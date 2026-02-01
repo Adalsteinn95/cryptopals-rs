@@ -10,9 +10,11 @@ pub fn bytes_to_hex(bytes: &[u8]) -> String {
 }
 
 pub fn b64_to_bytes(s: &str) -> Result<Vec<u8>> {
-    let s = s.trim();
+    // Base64 inputs like Cryptopals 6.txt often contain newlines.
+    // Strip all ASCII whitespace before decoding.
+    let cleaned: String = s.chars().filter(|c| !c.is_ascii_whitespace()).collect();
     let engine = base64::engine::general_purpose::STANDARD;
-    Ok(base64::Engine::decode(&engine, s)?)
+    Ok(base64::Engine::decode(&engine, cleaned)?)
 }
 
 pub fn bytes_to_b64(bytes: &[u8]) -> String {

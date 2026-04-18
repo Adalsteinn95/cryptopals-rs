@@ -5,3 +5,4 @@ pub mod c04_detect_single_character_xor;
 pub mod c05_repeating_key_xor;
 
 pub mod c06_break_repeating_xor;
+pub mod c07_aes_ecb_decrypt;
